@@ -54,7 +54,7 @@ public class KthLargestUsingHeap {
 		maxHeap = Arrays.copyOf(maxHeap, size + size / 2);
 	}
 
-	public int add(int val) {
+	public int offer(int val) {
 		insert(val);
 		int count = k;
 		List<Integer> l = new ArrayList<>();
@@ -92,11 +92,11 @@ public class KthLargestUsingHeap {
 
 	public static void main(String[] args) {
 		KthLargestUsingHeap k = new KthLargestUsingHeap(1, new int[] {-2});
-		System.out.println(k.add(-3));
-		System.out.println(k.add(0));
-		System.out.println(k.add(2));
-		System.out.println(k.add(-1));
-		System.out.println(k.add(4));
+		System.out.println(k.offer(-3));
+		System.out.println(k.offer(0));
+		System.out.println(k.offer(2));
+		System.out.println(k.offer(-1));
+		System.out.println(k.offer(4));
 
 		// KthLargestUsingHeap k = new KthLargestUsingHeap(3, new int[] { 4, 3,
 		// 2 });

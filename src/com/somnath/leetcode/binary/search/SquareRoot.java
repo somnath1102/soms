@@ -11,6 +11,7 @@ public class SquareRoot {
 			// to prevent overflow in big integer addition 
 			while ((middle = (upper - lower) / 2 + lower) > lower) {
 				middle = (upper + lower) / 2;
+				System.out.println("middle:" + middle + ",upper:" + upper + ",lower:" + lower + ",x/mid:" + x/middle);
 				if (middle == x/middle)
 					return middle;
 				if (middle > x/middle) {
@@ -19,11 +20,12 @@ public class SquareRoot {
 					lower = middle;
 				}
 			}
+			System.out.println("MMmiddle:" + middle + ",upper:" + upper + ",lower:" + lower + ",x/mid:" + x/middle);
 			return middle;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(mySqrt(2147395599));
+		System.out.println(mySqrt(1000));
 	}
 
 }
